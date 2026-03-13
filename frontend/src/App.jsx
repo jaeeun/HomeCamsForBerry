@@ -58,7 +58,10 @@ function App() {
   return (
     <div className="app-container">
       <header className="header">
-        <h1>Berry's Home Cams</h1>
+        <div className="header-logo-container">
+          <img src="/cat-favicon.png" alt="Berry Logo" className="header-logo" />
+          <h1>Berry's Home Cams</h1>
+        </div>
         <p className="subtitle">Real-time surveillance & two-way audio</p>
       </header>
       

@@ -41,6 +41,24 @@ body {
   text-align: center;
   margin-bottom: 3rem;
   animation: fadeInDown 0.8s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.header-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: contain;
+  box-shadow: 0 4px 15px var(--primary-glow);
 }
 
 .header h1 {

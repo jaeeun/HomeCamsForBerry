@@ -8,9 +8,10 @@ export function useWebRTC() {
   const [speakerState, setSpeakerState] = useState(false);
 
   useEffect(() => {
-    // Connect to signaling server
-    const ws = new WebSocket('ws://localhost:8000/ws');
-    ws.onopen = () => console.log('WebSocket connected');
+    // Connect to signaling server dynamically based on the current host IP
+    const wsUrl = `ws://${window.location.hostname}:8000/ws`;
+    const ws = new WebSocket(wsUrl);
+    ws.onopen = () => console.log(`WebSocket connected to ${wsUrl}`);
     ws.onmessage = async (event) => {
       const msg = JSON.parse(event.data);
       if (msg.action === 'answer') {
